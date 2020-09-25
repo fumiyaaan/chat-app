@@ -12,8 +12,11 @@ class RoomsController < ApplicationController
     end
   end
 
-    def index
-    end
+  def destroy
+    room = Room.find(params[:id])
+    room.destroy
+    redirect_to root_path
+  end
 
   private
 
